@@ -9,3 +9,9 @@ templateEngineOverride: njk,md
 ## Posts
 
 {% include "postlist.njk" %}
+
+![SERIF](/img/serif.png)
+
+```python
+print("Hello world")
+```

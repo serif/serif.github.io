@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shell Tricks</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/prism-darcula.css" />
+</head>
+<body>
+  <a href="/" id="logo-link">
+    <img src="/img/serif-darcula.png" alt="Logo" id="logo-img" />
+  </a>
+  <img src="/img/se-ri-fu-10.png" alt="serifu" id="serifu" />
+  <header>
+    <h1>Shell Tricks</h1>
+  </header>
+  <main>
+    <article><p>This is a blog post</p>
+<p>Automatically list directory contents after changing directories with <code>cd</code>. The <code>builtin</code> keyword helps the function reach the original command instead of starting an infinite loop.</p>
+<pre class="language-sh"><code class="language-sh"><span class="token function-name function">cd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin class-name">builtin</span> <span class="token builtin class-name">cd</span> <span class="token string">"<span class="token variable">$@</span>"</span>
+    <span class="token function">ls</span> <span class="token parameter variable">--color</span> --group-directories-first <span class="token parameter variable">-Xh</span>
+<span class="token punctuation">}</span></code></pre>
+</article>
+
+  </main>
+</body>
+</html>
